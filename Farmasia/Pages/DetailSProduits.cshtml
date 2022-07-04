@@ -1,0 +1,48 @@
+﻿@page
+@model Farmasia.Pages.DetailSProduitsModel
+@{
+}
+
+
+<h1>Details</h1>
+
+<div>
+    <h4>Produit</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SProduit.SProduitID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SProduit.SProduitID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SProduit.Design)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SProduit.Design)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SProduit.Type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SProduit.Type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SProduit.PU)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SProduit.PU)
+        </dd>
+        <dt class="col-sm-2">
+            Quantité en stock
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SProduit.QTE)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="/UpdateSprdouits" asp-route-id="@Model.SProduit?.SProduitID">Edit</a> |
+    <a asp-page="./SProduits">Back to List</a>
+</div>

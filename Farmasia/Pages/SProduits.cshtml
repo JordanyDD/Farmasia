@@ -1,0 +1,41 @@
+﻿@page
+@model Farmasia.Pages.SProduitsModel
+@{
+}
+
+<h1>Nos Produits</h1>
+<p>
+    <a asp-page="/CreateSProduits">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                CodeProduit
+            </th>
+            <th>
+                Designation
+            </th>
+            <th>
+                Type
+            </th>
+
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.SProduits) 
+        {
+            <tr>
+                <td>@Html.DisplayFor(ModelItem => item.SProduitID)</td>
+                <td>@Html.DisplayFor(ModelItem =>item.Design)</td>
+                <td>@Html.DisplayFor(ModelItem => item.Type)</td>
+                <td>
+                <a asp-page="/UpdateSProduits" asp-route-id="@item.SProduitID">Edit</a> |
+                <a asp-page="/DetailSProduits" asp-route-id="@item.SProduitID">Details</a> |
+                <a asp-page="/DeleteSProduits" asp-route-id="@item.SProduitID">Delete</a>
+            </td>
+            </tr>
+        }
+    </tbody>
+</table>

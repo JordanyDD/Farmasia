@@ -1,0 +1,50 @@
+﻿@page
+@model Farmasia.Pages.CreateSProduitsModel
+@{
+}
+
+
+
+<h1>Create</h1>
+
+<h4>Produit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            
+            <div class="form-group">
+                <label asp-for="SProduit.SProduitID" class="control-label"></label>
+                <input asp-for="SProduit.SProduitID" class="form-control" />
+               
+            </div>
+            <div class="form-group">
+                <label asp-for="SProduit.Design" class="control-label"></label>
+                <input asp-for="SProduit.Design" class="form-control" />
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="SProduit.Type" class="control-label"></label>
+                <input asp-for="SProduit.Type" class="form-control" />
+             
+            </div>
+            <div class="form-group">
+                <label asp-for="SProduit.PU" class="control-label"></label>
+                <input asp-for="SProduit.PU" class="form-control" />
+               
+            </div>
+            <div class="form-group">
+                <label asp-for="SProduit.QTE" class="control-label"></label>
+                <input asp-for="SProduit.QTE" class="form-control" />
+               
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/SProduits">Back to List</a>
+</div>
